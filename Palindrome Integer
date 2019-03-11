@@ -1,0 +1,15 @@
+bool Solution::isPalindrome(int A) {
+    
+    int b = A;
+    int sum = 0,r;
+    
+    if(A<0) return false;
+    
+    while(A) {
+        r = A%10;
+        sum = sum*10+r;
+        A = A/10;
+    }
+    if(sum == b) return true;
+    else return false;
+}
