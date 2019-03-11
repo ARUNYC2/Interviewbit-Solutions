@@ -1,0 +1,12 @@
+#include<math.h>
+int Solution::titleToNumber(string A) {
+    
+    long  retval = 0;
+    int len = A.length();
+  
+    for(int i=0;i<len;i++) 
+        retval += (int (A[i]) - 64) * pow(26,(len-i-1));
+    
+    return  retval;
+    
+}
